@@ -47,6 +47,7 @@ Node_Red --> Affichage_donnees
 
 ```
 
+Après avoir récupéré les données, nous avons configuré l'interface utilisateur. Cet interface doit afficher les valeurs de température dans un graphique. 
 
 ## ${\color{red}Annexe}$ 
 ### ${\color{blue}Annexe \space code \space Arduino \space ESP32} $
