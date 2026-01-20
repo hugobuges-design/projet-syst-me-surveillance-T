@@ -11,6 +11,10 @@ Pour pouvoir obtenir la température, nous avons utilisé un capteur de tempéra
   <img width="460" height="300" src="![LM35](LM35.png)">
 </p>
  
+<p align="center">
+  <img src="LM35.png" width="460" height="300">
+</p>
+
 $$datasheet \space du \space LM35$$
 
 ![ESP32](ESP32.png) 
