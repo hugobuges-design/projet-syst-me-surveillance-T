@@ -25,7 +25,9 @@ $$datasheet \space de \space l'ESP32$$
 
 Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimentation" du LM35 à la pin "3.3V" de la carte ESP32, un deuxième reliant la pin OUT à la sortie analogique A5 et un troisième reliant les GND des deux appareils.
 
-![montage](montage.jpg)
+<p align="center">
+  <img src="montage.jpg" width="360" height="360">
+</p>
 
 ## ${\color{red}Annexe}$ 
 ### ${\color{blue}Annexe \space code \space Arduino \space ESP32} $
