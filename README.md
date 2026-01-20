@@ -34,7 +34,14 @@ Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimenta
 $$montage \space LM35-ESP32$$
 
 #### <ins> Connexion Node Red </ins>
-Une fois ce montage réalisé, il a été connecté à l'ordinateur. Tout d'abord La  dans lequel nous avons rédigé un code Arduino pour récupérer les valeurs de température mesurées grâce au LM35.  
+Une fois ce montage réalisé, il a été connecté à l'ordinateur dans lequel nous avons rédigé un code Arduino. Ce code permet de récupérer les valeurs de température mesurées avec le LM35 et de se connecter en wifi au poste fixe sur lequel se trouve Node Red. 
+La liaison se fait comme suit : 
+```mermaid
+LM35 --> |recuperation des valeurs de temperatures| Centre_IA
+LM35 --> |connexion wifi a Centre_IA| Centre_IA
+Centre_IA --> |liaison wifi| Node_Red
+Node_Red --> Affichage_donnees
+```
 
 
 ## ${\color{red}Annexe}$ 
