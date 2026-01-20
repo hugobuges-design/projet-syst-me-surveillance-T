@@ -1,16 +1,18 @@
 # ${\color{red}Projet \space de \space système \space de \space surveillance \space de \space température}$ 
 
 # 📑 ${\color{red}Sommaire}$
-- [Objectif du projet](#objectif-du-projet)
+- [Introduction](#Introduction)
 - [Acquisition et transmission des données](#acquisition-et-transmission-des-données)
 - [Annexes](#Annexes)
 
 
-## ${\color{red}Objectif \space du \space projet}$ 
+## ${\color{red}Introduction}$ 
 L'objectif du projet est de concevoir un système de surveillance de température en utilisant un capteur LM35, un ESP32, un Raspberry Pi ainsi que le protocole MQTT. Les données seront transmises au Raspberry Pi via Mosquitto, stockées dans une base de données SQLite, et affichées en temps réel grâce à NodeRED. 
 
 
 ### ${\color{blue}I- \space Acquisition \space et \space transmission \space des \space données} $
+
+#### <ins>Réalisation du montage</ins>  
 Pour pouvoir obtenir la température, nous avons utilisé un capteur de température LM35 qui est connecté à la carte ESP32. Pour effectuer les branchements entre ces deux appareils, nous avons utilisé la documentation fournie lors des séances précédentes (voir image ci-dessous). 
  
 <p align="center">
@@ -30,6 +32,10 @@ Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimenta
 </p>
 
 $$montage \space LM35-ESP32$$
+
+#### <ins> Connexion Node Red </ins>
+Une fois ce montage réalisé, il a été connecté à l'ordinateur. Tout d'abord La  dans lequel nous avons rédigé un code Arduino pour récupérer les valeurs de température mesurées grâce au LM35.  
+
 
 ## ${\color{red}Annexe}$ 
 ### ${\color{blue}Annexe \space code \space Arduino \space ESP32} $
