@@ -39,6 +39,7 @@ La liaison se fait comme suit :
 
 ```mermaid
 
+flowchart TD
 LM35 --> |recuperation des valeurs de temperatures| Centre_IA
 LM35 --> |connexion wifi a Centre_IA| Centre_IA
 Centre_IA --> |liaison wifi| Node_Red
