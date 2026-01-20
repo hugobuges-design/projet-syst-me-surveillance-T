@@ -30,6 +30,7 @@ ${\color{red}Mettre \space photo \space montage}$
 ## ${\color{red}Annexe}$ 
 ### ${\color{blue}Annexe \space code \space ESP32} $
 
+```cpp 
 #include <WiFi.h> // Enables the ESP32 to connect to the local network (via WiFi)
 #include <PubSubClient.h> // Connect and publish to the MQTT broker
 // WiFi
@@ -109,3 +110,4 @@ else {
 client.disconnect(); // disconnect from the MQTT broker
 delay(1000*10); // print new values every 10 seconds
 }
+```
