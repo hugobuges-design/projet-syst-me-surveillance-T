@@ -34,7 +34,7 @@ Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimenta
 $$montage \space LM35-ESP32$$
 
 #### <ins> Connexion Node Red </ins>
-Une fois ce montage réalisé, il a été connecté à l'ordinateur dans lequel nous avons rédigé un code Arduino. Ce code permet de récupérer les valeurs de température mesurées avec le LM35 et de se connecter en wifi au poste fixe sur lequel se trouve Node Red. 
+Une fois ce montage réalisé, il a été connecté à l'ordinateur dans lequel nous avons rédigé un code Arduino (voir en Annexe). Ce code permet de récupérer les valeurs de température mesurées avec le LM35 et de se connecter en wifi au poste fixe sur lequel se trouve Node Red. 
 La liaison se fait comme suit : 
 
 ```mermaid
@@ -47,7 +47,13 @@ Node_Red --> Affichage_donnees
 
 ```
 
-Après avoir récupéré les données, nous avons configuré l'interface utilisateur. Cet interface doit afficher les valeurs de température dans un graphique. 
+Les données recueillies sont en temps réelles et affichées dans l'interface Node Red. 
+Après avoir récupéré ces données, nous avons configuré l'interface utilisateur. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de … blocs : 
++ bloc de connexion
++ bloc debug 
++ bloc jauge de température
++ bloc graphique
+
 
 ## ${\color{red}Annexe}$ 
 ### ${\color{blue}Annexe \space code \space Arduino \space ESP32} $
