@@ -28,7 +28,7 @@ Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimenta
 ${\color{red}Mettre \space photo \space montage}$ 
 
 ## ${\color{red}Annexe}$ 
-### ${\color{blue}Annexe \space code \space ESP32} $
+### ${\color{blue}Annexe \space code \space Arduino \space ESP32} $
 
 ```cpp 
 #include <WiFi.h> // Enables the ESP32 to connect to the local network (via WiFi)
