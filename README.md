@@ -12,4 +12,4 @@ Pour pouvoir obtenir la température, nous avons utilisé un capteur de tempéra
 
 Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimentation" du LM35 à la pin "3.3V" de la carte ESP32, un deuxième reliant la pin OUT à la sortie analogique A5 et un troisième reliant les GND des deux appareils.
 
-$${\color{red}Mettre photo montage}$$ 
+$${\color{red}Mettre \space photo \space montage}$$ 
