@@ -7,11 +7,11 @@ L'objectif du projet est de concevoir un système de surveillance de températur
 ### ${\color{blue}Acquisition \space et \space transmission \space des \space données}$  
 Pour pouvoir obtenir la température, nous avons utilisé un capteur de température LM35 qui est connecté à la carte ESP32. Pour effectuer les branchements entre ces deux appareils, nous avons utilisé la documentation fournie lors des séances précédentes (voir image ci-dessous). 
 
-![LM35](LM35.png)
+$$ ![LM35](LM35.png) $$
 
 $$datasheet \space du \space LM35$$
 
-![ESP32](ESP32.png)
+$$ ![ESP32](ESP32.png) $$ 
 
 $$datasheet \space de \space l'ESP32$$
 
