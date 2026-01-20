@@ -29,6 +29,8 @@ Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimenta
   <img src="montage.jpg" width="360" height="360">
 </p>
 
+$$montage \space LM35-ESP32$$
+
 ## ${\color{red}Annexe}$ 
 ### ${\color{blue}Annexe \space code \space Arduino \space ESP32} $
 
