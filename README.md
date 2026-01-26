@@ -65,13 +65,39 @@ Après avoir récupéré ces données, nous avons configuré l'interface utilisa
 
 $$Schéma \space Node-Red$$
 
-Chaque bloc a une configuration spécifique : 
+Chaque bloc a une configuration spécifique (voir les différentes photos) : 
 
 <ins> bloc de connexion :</ins> pour se connecter à CentreIA et collecter les données <br>
-<ins> bloc debug </ins><br>
+
+<p align="center">
+  <img src="Schema Node-Red.jpg" width="360" height="360">
+</p>
+
+<ins> bloc debug : </ins> configuration basique du bloc <br>
+
 <ins> bloc jauge de température :</ins> voir la température mesurée en direct<br>
+
+<p align="center">
+  <img src="Jauge.jpg" width="360" height="360">
+</p>
+
 <ins> bloc graphique :</ins> voir l'évolution de la température dans le temps<br>
+
+<p align="center">
+  <img src="graphique.jpg" width="360" height="360">
+</p>
+
 <ins> bloc SQLite :</ins> faire la base de données<br> 
+
+<p align="center">
+  <img src="bloc sql.jpg" width="360" height="360">
+</p>
+
+<ins> bloc fonction :</ins> faire la base de données<br> 
+
+<p align="center">
+  <img src="bloc fonction.jpg" width="360" height="360">
+</p>
 
 
 
