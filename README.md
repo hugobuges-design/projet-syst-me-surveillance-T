@@ -51,6 +51,34 @@ Node_Red --> Affichage_donnees
 
 ```
 
+Pour démarrer et configurer le Raspberry et Node-Red nous avoons suvi la démarche suivante : <br> 
+<ins>code Raspberry :</ins><br> 
++ pour installer node red : 
+``` sql
+bash <(curl -sL https://github.com/node-red/linux-installers/releases/latest/download/update-nodejs-and-nodered-deb)
+```
++ pour ouvrir node red :
+```sql
+node-red-pi --max-old-space-size=256
+```
+
++ installation de SQLite :
+```sql
+sudo apt install sqlite3
+```
++ ouvrir la base de donnée (à vérifier) :
+```sql
+sqlite3 data.db
+```
++ créer une table de données :
+```sql
+CREATE TABLE mesures (id INTEGER PRIMARY KEY AUTOINCREMENT, ts datetime, temp real);
+```
++ ouvrir le contenu de la table : 
+```sql
+select * from mesures;
+```
+
 Les données recueillies sont en temps réelles et affichées dans l'interface Node Red. 
 Après avoir récupéré ces données, nous avons configuré l'interface utilisateur. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de 9 blocs : 
 + bloc de connexion
@@ -112,6 +140,7 @@ mot de passe : IUT2026 <br>
 
 
 Adafruit DMA neopixel Library
+
 
 ## ${\color{red}Annexe}$ 
 ### ${\color{blue}Annexe \space code \space Arduino \space ESP32} $
