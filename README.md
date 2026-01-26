@@ -68,7 +68,7 @@ Chaque bloc a une configuration spécifique :
 <ins> bloc inject :</ins> il va servir à envoyer les données de température reçues dans un tableau regroupant la valeur de la température, la date de la mesure et la tempérarture. <br>
 
 <p align="center">
-  <img src="Schema Node-Red" width="360" height="360">
+  <img src="Schema Node-Red.jpg" width="360" height="360">
 </p>
 
 $$Schéma \space Node-Red$$
