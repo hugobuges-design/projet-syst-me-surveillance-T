@@ -33,7 +33,7 @@ $$datasheet \space du \space LM35$$
  
 $$datasheet \space de \space l'ESP32$$
 
-Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimentation" du LM35 à la pin "3.3V" de la carte ESP32, un deuxième reliant la pin OUT à la sortie analogique A5 et un troisième reliant les GND des deux appareils.
+Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimentation" du LM35 à la pin "VBUS" ou "USB" de la carte ESP32 qui délivre 5V, un deuxième reliant la pin OUT à la sortie analogique A5 et un troisième reliant les GND des deux appareils.
 
 <p align="center">
   <img src="montage.jpg" width="360" height="360">
@@ -131,9 +131,9 @@ Ensuite aller sur le crayon et compléter l'onglet security <br>
 
 <ins> bloc jauge de température :</ins> voir la température mesurée en direct<br>
 Cette jauge est paramétrée de manière à ce que trois couleurs soit affichées en fonction de la température mesurée : 
-+ bleue pour T : 5 < T < 18 °C
-+ vert pour T : 18 < T < 27 °C
-+ rouge pour T : 27 < T < 30°C
++ bleue pour T : 10 < T < 18 °C
++ vert pour T : 18 < T < 25 °C
++ rouge pour T : 25 < T < 30°C
 
 <p align="center">
   <img src="bloc jauge.jpg" width="360" height="360">
