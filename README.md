@@ -4,6 +4,8 @@
 - [Introduction](#Introduction)
 - [Acquisition des données](#acquisition-des-données)
 - [Transmission des données](#transmission-des-données)
+- - [Configuration des blocs](##Configuration des blocs) 
+- - [Chemin d'accès](##Chemin d'accès)
 - [Annexes](#Annexes)
 
 
