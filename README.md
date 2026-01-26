@@ -150,7 +150,7 @@ Une fois les blocs configurés, nous recevons les valeurs de température dans N
 Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nous indique lorsque la valeur de température mesurée est de 0°C (Voir code Arduino LED en Annexe2). Pour cela il a fallut installer la librairie "Adafruit DMA neopixel". On retrouve en Annexe 3 le code Arduino final avec le clignotement de la LED intégré.  <br> </br>
 
 <p align="center">
-  <img src="LED Bleue.jpg" width="260" >
+  <img src="LED Bleue.jpg" width="160" >
 </p><br> </br>
 
 
