@@ -58,10 +58,10 @@ Après avoir récupéré ces données, nous avons configuré l'interface utilisa
 
 Chaque bloc a une configuration spécifique : 
 
-<ins> bloc de connexion </ins> 
-<ins> bloc debug </ins> 
-<ins> bloc jauge de température </ins> 
-<ins> bloc graphique </ins> 
+<ins> bloc de connexion </ins><br>
+<ins> bloc debug </ins> <br>
+<ins> bloc jauge de température </ins> <br>
+<ins> bloc graphique </ins> <br>
 
 ## ${\color{red}Annexe}$ 
 ### ${\color{blue}Annexe \space code \space Arduino \space ESP32} $
