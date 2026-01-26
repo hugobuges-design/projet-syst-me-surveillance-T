@@ -150,7 +150,7 @@ Une fois les blocs configurés, nous recevons les valeurs de température dans N
 Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nous indique lorsque la valeur de température mesurée est de 0°C (Voir code Arduino LED en Annexe2). Pour cela il a fallut installer la librairie "Adafruit DMA neopixel". On retrouve en Annexe 3 le code Arduino final avec le clignotement de la LED intégré.  <br> </br>
 
 <p align="center">
-  <img src="LED Bleue.jpg" width="460" >
+  <img src="LED Bleue.jpg" width="260" >
 </p><br> </br>
 
 
@@ -182,7 +182,7 @@ Pour le mot de passe, on définit le mot de passe sur le compte gmail en allant 
 
 Voici le message reçu par mail : <br></br>
 <p align="center">
-  <img src="capture mail.png" width="360" height="360">
+  <img src="capture mail.png" width="260">
 </p>
 
 
