@@ -147,9 +147,12 @@ Ensuite aller sur le crayon et compléter l'onglet security <br>
 ### ${\color{blue}III- \space Alerte \space et \space automatisation} $
 #### <ins>**Configuration de la LED**</ins>
 Une fois les blocs configurés, nous recevons les valeurs de température dans Node-Red. 
-Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nous indique lorsque la valeur de température mesurée est de 0°C (Voir code Arduino LED en Annexe2). On retrouve en Annexe 3 le code Arduino final avec le clignotement de la LED intégré.  
+Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nous indique lorsque la valeur de température mesurée est de 0°C (Voir code Arduino LED en Annexe2). Pour cela il a fallut installer la librairie "Adafruit DMA neopixel". On retrouve en Annexe 3 le code Arduino final avec le clignotement de la LED intégré.  <br> </br>
 
-<ins> ${\color{red}Image LED}$ </ins>
+<p align="center">
+  <img src="LED Bleue.jpg" width="360" height="360">
+</p><br> </br>
+
 
 #### <ins>**Configuration du message d'alerte**</ins>
 Dans l'optique où l'on mesure une température grâce au LM35 sans être à côté du capteur, nous avons fait en sorte de recevoir un mail pour indiquer que la température mesurée est trop basse.
@@ -168,18 +171,20 @@ On sélectionne ensuite le bloc mail dans lequel on remplit les champs suivants 
   <img src="bloc mail.jpg" width="360" height="360">
 </p>
 
-Pour le mot de passe, on définit le mot de passe sur le compte gmail en alllant sur : 
+Pour le mot de passe, on définit le mot de passe sur le compte gmail en allant sur : 
 + Sécurité
 + Activer la validation en 2 étapes
 + Mot de passe des applications 
 + Rentrer le nom ded l'application 
 + "Créer" 
 + Rentrer le mot de passe afficher dans la partie password de Node-Red 
+<br> </br>
 
+Voici le message reçu par mail : <br></br>
+<p align="center">
+  <img src="capture mail.png" width="360" height="360">
+</p>
 
-
-<ins> ${\color{red}foto mail}$ </ins>
-<ins> ${\color{red}Adafruit DMA neopixel Library}$ </ins>
 
 ## ${\color{red}Annexe}$ 
 ### ${\color{blue}Annexe 1}$ 
