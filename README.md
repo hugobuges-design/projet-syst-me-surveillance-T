@@ -34,14 +34,15 @@ Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimenta
 $$montage \space LM35-ESP32$$
 
 #### <ins> Connexion Node Red </ins>
-Une fois ce montage réalisé, il a été connecté à l'ordinateur dans lequel nous avons rédigé un code Arduino (voir en Annexe). Ce code permet de récupérer les valeurs de température mesurées avec le LM35 et de se connecter en wifi au poste fixe sur lequel se trouve Node Red. 
+Une fois ce montage réalisé, il a été connecté à l'ordinateur dans lequel nous avons rédigé un code Arduino (voir en Annexe). Ce code permet de récupérer les valeurs de température mesurées avec le LM35 et de se connecter en wifi au poste fixe sur lequel se trouve Node Red. Dans le programme Arduino, nous avons fait en sorte qu'un mot de passe et un nom d'utilisateur soit rentré pour se connecter à CentreIA.
 La liaison se fait comme suit : 
 
 ```mermaid
 
 flowchart TD
-LM35 --> |recuperation des valeurs de temperatures| Centre_IA
-LM35 --> |connexion wifi a Centre_IA| Centre_IA
+Arduino --> |recuperation des valeurs de temperatures| Centre_IA
+LM35 --> Arduino --> Centre_IA
+Arduino --> |connexion wifi a Centre_IA| Centre_IA
 Centre_IA --> |liaison wifi| Node_Red
 Node_Red --> Affichage_donnees
 
@@ -50,18 +51,27 @@ Node_Red --> Affichage_donnees
 Les données recueillies sont en temps réelles et affichées dans l'interface Node Red. 
 Après avoir récupéré ces données, nous avons configuré l'interface utilisateur. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de … blocs : 
 + bloc de connexion
-+ bloc debug 
++ 2 blocs debug 
 + bloc jauge de température
 + bloc graphique
-+ bloc SQLite
-+ bloc … 
++ 2 blocs SQLite
++ bloc fonction
++ bloc inject
 
 Chaque bloc a une configuration spécifique : 
 
-<ins> bloc de connexion </ins><br>
-<ins> bloc debug </ins> <br>
-<ins> bloc jauge de température </ins> <br>
-<ins> bloc graphique </ins> <br>
+<ins> bloc de connexion :</ins> pour se connecter à CentreIA et collecter les données <br>
+<ins> bloc debug </ins><br>
+<ins> bloc jauge de température :</ins> voir la température mesurée en direct<br>
+<ins> bloc graphique :</ins> voir l'évolution de la température dans le temps<br>
+<ins> bloc SQLite :</ins> faire la base de données<br> 
+<ins> bloc inject :</ins> il va servir à envoyer les données de température reçues dans un tableau regroupant la valeur de la température, la date de la mesure et la tempérarture. <br>
+
+<p align="center">
+  <img src="Schema Node-Red" width="360" height="360">
+</p>
+
+$$Schéma \space Node-Red$$
 
 ## ${\color{red}Annexe}$ 
 ### ${\color{blue}Annexe \space code \space Arduino \space ESP32} $
