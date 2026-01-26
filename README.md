@@ -280,7 +280,6 @@ delay(1000*10); // print new values every 10 seconds
 </br> 
 ## ${\color{blue}Annexe 2}$ 
 ### ${\color{blue}Code \space Arduino \space LED} $ 
-<br> </br>
 
 ```cpp
 void setup() {
@@ -309,7 +308,6 @@ void loop() {
 
 ## ${\color{blue}Annexe 3}$ 
 ### ${\color{blue}Code \space final \space Arduino} $ 
-<br> </br>
 
 ```cpp 
 #include <WiFi.h> // Enables the ESP32 to connect to the local network (via WiFi)
