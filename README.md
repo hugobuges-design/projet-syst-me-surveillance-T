@@ -51,12 +51,11 @@ Node_Red --> Affichage_donnees
 Les données recueillies sont en temps réelles et affichées dans l'interface Node Red. 
 Après avoir récupéré ces données, nous avons configuré l'interface utilisateur. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de 9 blocs : 
 + bloc de connexion
-+ 2 blocs debug 
++ bloc debug 
 + bloc jauge de température
 + bloc graphique
-+ 2 blocs SQLite
++ bloc SQLite
 + bloc fonction
-+ bloc inject
 
 <p align="center">
   <img src="Schema Node-Red.jpg" width="360" height="360">
