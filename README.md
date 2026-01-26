@@ -1,13 +1,15 @@
 # ${\color{red}Projet \space de \space système \space de \space surveillance \space de \space température}$ 
 
 # 📑 ${\color{red}Sommaire}$
-- [Introduction](#Introduction)
-- [Acquisition des données](#acquisition-des-données)
-- [Transmission des données](#transmission-des-données)
-- - [Configuration des blocs](##Configuration des blocs) 
-- - [Chemin d'accès](##Chemin d'accès)
-- [Annexes](#Annexes)
 
+- [Introduction](#Introduction)
+- [Acquisition des données](#Acquisition-des-données)
+- [Transmission des données](#Transmission-des-données)
+  - [Configuration des blocs](#Configuration-des-blocs)
+  - [Chemin d'accès](#Chemin-daccès)
+- [Annexes](#Annexes)
+<br><br>
+</br>
 
 ## ${\color{red}Introduction}$ 
 L'objectif du projet est de concevoir un système de surveillance de température en utilisant un capteur LM35, un ESP32, un Raspberry Pi ainsi que le protocole MQTT. Les données seront transmises au Raspberry Pi via Mosquitto, stockées dans une base de données SQLite, et affichées en temps réel grâce à NodeRED. 
