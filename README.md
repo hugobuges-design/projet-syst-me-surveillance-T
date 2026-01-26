@@ -156,12 +156,21 @@ Dans l'optique où l'on mesure une température grâce au LM35 sans être à cô
 
 <p align="center">
   <img src="Schema Mail.jpg" width="360" height="360">
-</p>
+</p><br> </br>
 
+Pour configurer le bloc mail, nous avons d'abord téléchargé une librairie sur Node-Red : node-red-node-email.
+On sélectionne ensuite le bloc mail dans lequel on remplit les champs suivants : 
 <p align="center">
   <img src="bloc mail.jpg" width="360" height="360">
 </p>
 
+Pour le mot de passe, on définit le mot de passe sur le compte gmail en alllant sur : 
++ Sécurité
++ Activer la validation en 2 étapes
++ Mot de passe des applications 
++ Rentrer le nom ded l'application 
++ "Créer" 
++ Rentrer le mot de passe afficher dans la partie password de Node-Red 
 <p align="center">
   <img src="bloc fonction mail.jpg" width="360" height="360">
 </p>
