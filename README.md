@@ -125,6 +125,14 @@ Ensuite aller sur le crayon et compléter l'onglet security <br>
 <ins> bloc debug : </ins> configuration basique du bloc <br>
 
 <ins> bloc jauge de température :</ins> voir la température mesurée en direct<br>
+Cette jauge est paramétrée de manière à ce que trois couleurs soit affichées en fonction de la température mesurée : 
++ bleue pour T : 5 < T < 18 °C
++ vert pour T : 18 < T < 27 °C
++ rouge pour T : 27 < T < 30°C
+
+<p align="center">
+  <img src="bloc jauge.jpg" width="360" height="360">
+</p>
 
 <p align="center">
   <img src="Jauge.jpg" width="360" height="360">
@@ -152,7 +160,7 @@ Ensuite aller sur le crayon et compléter l'onglet security <br>
 ### ${\color{blue}III- \space Alerte \space et \space automatisation} $
 #### <ins>**Configuration de la LED**</ins>
 Une fois les blocs configurés, nous recevons les valeurs de température dans Node-Red. 
-Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nous indique lorsque la valeur de température mesurée est de 0°C (Voir code Arduino LED en Annexe2). Pour cela il a fallut installer la librairie "Adafruit DMA neopixel". On retrouve en Annexe 3 le code Arduino final avec le clignotement de la LED intégré.  <br> </br>
+Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nous indique lorsque la valeur de température mesurée est inférieure ou égale à 17°C et rouge lorsque la température est inférieure ou égale à 27°C.(Voir code Arduino LED en Annexe2). Pour cela il a fallut installer la librairie "Adafruit DMA neopixel". On retrouve en Annexe 3 le code Arduino final avec le clignotement de la LED intégré.  <br> </br>
 
 <p align="center">
   <img src="LED Bleue.jpg" width="160" >
