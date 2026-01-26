@@ -2,7 +2,8 @@
 
 # 📑 ${\color{red}Sommaire}$
 - [Introduction](#Introduction)
-- [Acquisition et transmission des données](#acquisition-et-transmission-des-données)
+- [Acquisition des données](#acquisition-des-données)
+- [Transmission des données](#transmission-des-données)
 - [Annexes](#Annexes)
 
 
