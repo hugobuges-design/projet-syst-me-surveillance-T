@@ -82,7 +82,12 @@ CREATE TABLE mesures (id INTEGER PRIMARY KEY AUTOINCREMENT, ts datetime, temp re
 ```sql
 select * from mesures;
 ```
-<br><br>
+<br>
+Exemple de tableau affiché dans la console Raspberry : 
+<p align="center">
+  <img src="photo tableau.jpg" width="400" height="400">
+</p>
+<br>
 </br>
 Les données recueillies sont en temps réelles et affichées dans l'interface Node Red. 
 Après avoir récupéré ces données, nous avons configuré l'interface utilisateur. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de 9 blocs : 
