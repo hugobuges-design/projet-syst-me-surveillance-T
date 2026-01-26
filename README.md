@@ -83,7 +83,7 @@ CREATE TABLE mesures (id INTEGER PRIMARY KEY AUTOINCREMENT, ts datetime, temp re
 select * from mesures;
 ```
 <br>
-Exemple de tableau affiché dans la console Raspberry : 
+Exemple de tableau affiché dans la console Raspberry : <br></br>
 <p align="center">
   <img src="photo tableau.jpg" width="400" height="400">
 </p>
@@ -191,9 +191,9 @@ Voici le message reçu par mail : <br></br>
 </p>
 
 
-## ${\color{red}Annexe}$ 
-### ${\color{blue}Annexe 1}$ 
-#### ${\color{blue}Code \space Arduino \space ESP32} $
+# ${\color{red}Annexe}$ 
+## ${\color{blue}Annexe 1}$ 
+### ${\color{blue}Code \space Arduino \space ESP32} $
 
 ```cpp 
 #include <WiFi.h> // Enables the ESP32 to connect to the local network (via WiFi)
@@ -278,8 +278,9 @@ delay(1000*10); // print new values every 10 seconds
 ```
 <br><br> 
 </br> 
-### ${\color{blue}Annexe 2}$ 
-#### ${\color{blue}Code \space Arduino \space LED} $ <br> </br>
+## ${\color{blue}Annexe 2}$ 
+### ${\color{blue}Code \space Arduino \space LED} $ 
+<br> </br>
 
 ```cpp
 void setup() {
@@ -306,8 +307,10 @@ void loop() {
 }
 ```
 
-### ${\color{blue}Annexe 3}$ 
-#### ${\color{blue}Code \space final \space Arduino} $ <br> </br>
+## ${\color{blue}Annexe 3}$ 
+### ${\color{blue}Code \space final \space Arduino} $ 
+<br> </br>
+
 ```cpp 
 #include <WiFi.h> // Enables the ESP32 to connect to the local network (via WiFi)
 #include <PubSubClient.h> // Connect and publish to the MQTT broker
