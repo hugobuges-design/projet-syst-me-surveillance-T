@@ -65,12 +65,16 @@ Après avoir récupéré ces données, nous avons configuré l'interface utilisa
 
 $$Schéma \space Node-Red$$
 
-Chaque bloc a une configuration spécifique (voir les différentes photos) : 
+Chaque bloc a une configuration spécifique (voir les différentes photos pour paramétrer les blocs) : 
 
 <ins> bloc de connexion :</ins> pour se connecter à CentreIA et collecter les données <br>
 
 <p align="center">
-  <img src="Schema Node-Red.jpg" width="360" height="360">
+  <img src="bloc connexion.jpg" width="360" height="360">
+</p>
+
+<p align="center">
+  <img src="mqtt in.jpg" width="360" height="360">
 </p>
 
 <ins> bloc debug : </ins> configuration basique du bloc <br>
