@@ -41,7 +41,7 @@ La liaison se fait comme suit :
 
 flowchart TD
 Arduino --> |recuperation des valeurs de temperatures| Centre_IA
-LM35 --> Arduino --> Centre_IA
+LM35 --> Arduino --> |Mot de passe et nom d'utilisateur|Centre_IA
 Arduino --> |connexion wifi a Centre_IA| Centre_IA
 Centre_IA --> |liaison wifi| Node_Red
 Node_Red --> Affichage_donnees
@@ -49,7 +49,7 @@ Node_Red --> Affichage_donnees
 ```
 
 Les données recueillies sont en temps réelles et affichées dans l'interface Node Red. 
-Après avoir récupéré ces données, nous avons configuré l'interface utilisateur. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de … blocs : 
+Après avoir récupéré ces données, nous avons configuré l'interface utilisateur. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de 9 blocs : 
 + bloc de connexion
 + 2 blocs debug 
 + bloc jauge de température
@@ -57,6 +57,12 @@ Après avoir récupéré ces données, nous avons configuré l'interface utilisa
 + 2 blocs SQLite
 + bloc fonction
 + bloc inject
+
+<p align="center">
+  <img src="Schema Node-Red.jpg" width="360" height="360">
+</p>
+
+$$Schéma \space Node-Red$$
 
 Chaque bloc a une configuration spécifique : 
 
@@ -67,11 +73,7 @@ Chaque bloc a une configuration spécifique :
 <ins> bloc SQLite :</ins> faire la base de données<br> 
 <ins> bloc inject :</ins> il va servir à envoyer les données de température reçues dans un tableau regroupant la valeur de la température, la date de la mesure et la tempérarture. <br>
 
-<p align="center">
-  <img src="Schema Node-Red.jpg" width="360" height="360">
-</p>
 
-$$Schéma \space Node-Red$$
 
 ## ${\color{red}Annexe}$ 
 ### ${\color{blue}Annexe \space code \space Arduino \space ESP32} $
