@@ -10,7 +10,7 @@
 L'objectif du projet est de concevoir un système de surveillance de température en utilisant un capteur LM35, un ESP32, un Raspberry Pi ainsi que le protocole MQTT. Les données seront transmises au Raspberry Pi via Mosquitto, stockées dans une base de données SQLite, et affichées en temps réel grâce à NodeRED. 
 
 
-### ${\color{blue}I- \space Acquisition \space et \space transmission \space des \space données} $
+### ${\color{blue}I- \space Acquisition \space des \space données} $
 
 #### <ins>Réalisation du montage</ins>  
 Pour pouvoir obtenir la température, nous avons utilisé un capteur de température LM35 qui est connecté à la carte ESP32. Pour effectuer les branchements entre ces deux appareils, nous avons utilisé la documentation fournie lors des séances précédentes (voir image ci-dessous). 
@@ -33,7 +33,8 @@ Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimenta
 
 $$montage \space LM35-ESP32$$
 
-#### <ins> Connexion Node Red </ins>
+### ${\color{blue}II- \space Transmission \space des \space données} $
+
 Une fois ce montage réalisé, il a été connecté à l'ordinateur dans lequel nous avons rédigé un code Arduino (voir en Annexe). Ce code permet de récupérer les valeurs de température mesurées avec le LM35 et de se connecter en wifi au poste fixe sur lequel se trouve Node Red. Dans le programme Arduino, nous avons fait en sorte qu'un mot de passe et un nom d'utilisateur soit rentré pour se connecter à CentreIA.
 La liaison se fait comme suit : 
 
@@ -70,7 +71,6 @@ Chaque bloc a une configuration spécifique :
 <ins> bloc jauge de température :</ins> voir la température mesurée en direct<br>
 <ins> bloc graphique :</ins> voir l'évolution de la température dans le temps<br>
 <ins> bloc SQLite :</ins> faire la base de données<br> 
-<ins> bloc inject :</ins> il va servir à envoyer les données de température reçues dans un tableau regroupant la valeur de la température, la date de la mesure et la tempérarture. <br>
 
 
 
