@@ -35,6 +35,7 @@ Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimenta
 $$montage \space LM35-ESP32$$
 
 ### ${\color{blue}II- \space Transmission \space des \space données} $
+#### <ins>**Chemin d'accès**</ins>
 
 Une fois ce montage réalisé, il a été connecté à l'ordinateur dans lequel nous avons rédigé un code Arduino (voir en Annexe). Ce code permet de récupérer les valeurs de température mesurées avec le LM35 et de se connecter en wifi au poste fixe sur lequel se trouve Node Red. Dans le programme Arduino, nous avons fait en sorte qu'un mot de passe et un nom d'utilisateur soit rentré pour se connecter à CentreIA.
 La liaison se fait comme suit : 
@@ -64,6 +65,8 @@ Après avoir récupéré ces données, nous avons configuré l'interface utilisa
 </p>
 
 $$Schéma \space Node-Red$$
+
+#### <ins>**Configuration des blocs**</ins>
 
 Chaque bloc a une configuration spécifique (voir les différentes photos pour paramétrer les blocs) : 
 
