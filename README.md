@@ -92,7 +92,7 @@ Après avoir récupéré ces données, nous avons configuré l'interface utilisa
 + bloc graphique
 + bloc SQLite
 + bloc fonction
-
+<br> </br>
 <p align="center">
   <img src="Schema Node-Red.jpg" width="360" height="360">
 </p>
