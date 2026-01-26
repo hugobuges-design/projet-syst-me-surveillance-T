@@ -70,11 +70,15 @@ Chaque bloc a une configuration spécifique (voir les différentes photos pour p
 <ins> bloc de connexion :</ins> pour se connecter à CentreIA et collecter les données <br>
 
 <p align="center">
-  <img src="bloc connexion.jpg" width="360" height="360">
+  <img src="mqtt in.jpg" width="360" height="360">
 </p>
 
+Ensuite aller sur le crayon et compléter l'onglet security <br> 
+nom d'utilisateur : user_iut <br>
+mot de passe : IUT2026 <br>  
+
 <p align="center">
-  <img src="mqtt in.jpg" width="360" height="360">
+  <img src="bloc connexion.jpg" width="360" height="360">
 </p>
 
 <ins> bloc debug : </ins> configuration basique du bloc <br>
@@ -104,6 +108,7 @@ Chaque bloc a une configuration spécifique (voir les différentes photos pour p
 </p>
 
 
+Adafruit DMA neopixel Library
 
 ## ${\color{red}Annexe}$ 
 ### ${\color{blue}Annexe \space code \space Arduino \space ESP32} $
