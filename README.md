@@ -8,6 +8,9 @@
   - [Configuration des blocs](#Configuration-des-blocs)
   - [Chemin d'accès](#Chemin-daccès)
 - [Annexes](#Annexes)
+  - [Annexe 1](#Annexe 1) 
+  - [Annexe 2](#Annexe 2)
+  - [Annexe 3](#Annexe 3)
 <br><br>
 </br>
 
