@@ -104,6 +104,8 @@ Après avoir récupéré ces données, nous avons configuré l'interface utilisa
 
 $$Schéma \space Node-Red$$
 
+<br> </br> 
+Pour visualiser la jauge et le graphique, on ouvre une nouvel page Node-Red  
 #### <ins>**Configuration des blocs**</ins>
 
 Chaque bloc a une configuration spécifique (voir les différentes photos pour paramétrer les blocs) : 
