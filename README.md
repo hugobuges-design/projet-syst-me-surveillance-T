@@ -156,6 +156,10 @@ Dans l'optique où l'on mesure une température grâce au LM35 sans être à cô
 
 <p align="center">
   <img src="Schema Mail.jpg" width="360" height="360">
+</p>
+
+<p align="center">
+  <img src="bloc fonction mail.jpg" width="360" height="360">
 </p><br> </br>
 
 Pour configurer le bloc mail, nous avons d'abord téléchargé une librairie sur Node-Red : node-red-node-email.
@@ -171,9 +175,8 @@ Pour le mot de passe, on définit le mot de passe sur le compte gmail en alllant
 + Rentrer le nom ded l'application 
 + "Créer" 
 + Rentrer le mot de passe afficher dans la partie password de Node-Red 
-<p align="center">
-  <img src="bloc fonction mail.jpg" width="360" height="360">
-</p>
+
+
 
 <ins> ${\color{red}foto mail}$ </ins>
 <ins> ${\color{red}Adafruit DMA neopixel Library}$ </ins>
