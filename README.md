@@ -184,7 +184,7 @@ ls puis pwd. <br>
 ### ${\color{blue}III- \space Alerte \space et \space automatisation} $
 #### <ins>**Configuration de la LED**</ins>
 Une fois les blocs configurés, nous recevons les valeurs de température dans Node-Red. 
-Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nous indique lorsque la valeur de température mesurée est inférieure ou égale à 17°C et rouge lorsque la température est inférieure ou égale à 27°C.(Voir code Arduino LED en Annexe2 ou en fichier joint). Pour cela il a fallut installer la librairie "Adafruit DMA neopixel". On retrouve en Annexe 3 (ou en fichier joint) le code Arduino final avec le clignotement de la LED intégré.  <br> </br>
+Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nous indique lorsque la valeur de température mesurée est inférieure ou égale à 18°C et rouge lorsque la température est inférieure ou égale à 27°C.(Voir code Arduino LED en Annexe2 ou en fichier joint). Pour cela il a fallut installer la librairie "Adafruit DMA neopixel". On retrouve en Annexe 3 (ou en fichier joint) le code Arduino final avec le clignotement de la LED intégré.  <br> </br>
 
 <p align="center">
   <img src="LED Bleue.jpg" width="160" >
@@ -195,9 +195,9 @@ Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nou
 
 
 #### <ins>**Configuration du message d'alerte**</ins>
-Dans l'optique où l'on mesure une température grâce au LM35 sans être à côté du capteur, nous avons fait en sorte de recevoir un mail pour indiquer que la température mesurée est trop basse.
+Dans l'optique où l'on mesure une température grâce au LM35 sans être à côté du capteur, nous avons fait en sorte de recevoir un mail pour indiquer que la température mesurée est trop basse ou trop haute.
 
-Dans un second temps, nous avons donc rajouté 4 blocs à ceux déjà existant : 
+Nous avons donc, dans un second temps,  rajouté 4 blocs à ceux déjà existant : 
 + <ins> bloc fonction :</ins> définir le message à envoyer <br> 
 <p align="center">
   <img src="bloc fonction mail.jpg" width="360" height="360">
@@ -229,9 +229,9 @@ Pour le mot de passe, on définit le mot de passe sur le compte gmail en allant 
 + Sécurité
 + Activer la validation en 2 étapes
 + Mot de passe des applications 
-+ Rentrer le nom ded l'application 
++ Rentrer le nom de l'application 
 + "Créer" 
-+ Rentrer le mot de passe afficher dans la partie password de Node-Red 
++ Rentrer le mot de passe afficher par gmail dans la partie password de Node-Red 
 <br> </br>
 
 Voici le message reçu par mail : <br></br>
@@ -240,7 +240,7 @@ Voici le message reçu par mail : <br></br>
 </p>
 <br></br>
 
-Pour avoir un historique des données, on les enregistre dans un fichier csv grâce à la commande suivante : 
+Pour avoir un historique des données, on les enregistre dans un fichier csv grâce à la commande suivante (sur Raspberry): 
 ``` sql
 sqlite3 -header -csv data.db " select * from mesures;" > data_mesures1.csv
 ```
@@ -249,6 +249,7 @@ Cela permet de faciliter leur exploitation (voir fichier joint).
 # ${\color{red}Démonstration}$ 
 La vidéo de démonstrtation se trouve dans le fichier : 1000014436.mp4
 
+<h1 id="Annexes">${\color{red}Annexe}$</h1>
 # ${\color{red}Annexe}$ 
 ## ${\color{blue}Annexe 1}$ 
 ### ${\color{blue}Code \space Arduino \space ESP32} $
