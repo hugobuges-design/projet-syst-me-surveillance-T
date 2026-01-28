@@ -7,7 +7,7 @@
 - [Transmission des données](#Transmission)
   - [Configuration des blocs](#Configuration)
   - [Chemin d'accès](#Chemin)
-- [Fiabilité et résolution de problèmes](#fiabilité)
+- [Fiabilité et résolution de problèmes](#fiabilite)
 - [Démonstration](#Démonstration)
 - [Annexes](#Annexes)
   - [Annexe 1 - code initial](#Annexe-1) 
