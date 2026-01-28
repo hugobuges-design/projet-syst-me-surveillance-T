@@ -249,6 +249,8 @@ sqlite3 -header -csv data.db " select * from mesures;" > data_mesures1.csv
 ```
 Cela permet de faciliter leur exploitation (voir fichier joint). 
 
+<h1 id="Fiabilité et résolution de problème">${\color{red}Fiabilité et résolution de problème}$</h1>
+
 <h1 id="Démonstration">${\color{red}Démonstration}$</h1> 
 La vidéo de démonstrtation se trouve dans le fichier : 1000014436.mp4
 
