@@ -72,7 +72,7 @@ node-red-pi --max-old-space-size=256
 ```
 Pendant le chargement, un lien http://127.0.0.1:1880/ va apparaitre. Il faudra cliquer dessus pour ouvrir Node-Red dans le navigateur du Raspberry.  
 
-+ installation de SQLite :
++ installation de SQLite pour la base de données :
 ```sql
 sudo apt install sqlite3
 ```
@@ -91,14 +91,14 @@ select * from mesures;
 Au début le tableau de données est vide. On va donc installer la librairie SQLite sur Node-Red : node-red-node-sqlite
 <br>
 
-Les données recueillies sont en temps réelles et affichées dans l'interface Node Red. 
-Exemple de tableau affiché à présent dans la console Raspberry : <br></br>
+Les données recueillies sont stockées en temps réelles dans la base de donnée. <br></br>
+Lorsque l'on réouvre la table sur le raspberry, on obtient à présent le tableau ci-dessous : <br></br>
 <p align="center">
-  <img src="photo tableau.jpg" width="400" height="400">
+  <img src="photo tableau.jpg" width="400">
 </p>
 <br></br>
 
-Après avoir récupéré ces données, nous avons configuré l'interface utilisateur Node-Red. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de 6 blocs : 
+Les données obtenues dans Node Red sont affichées dans son interface. Après avoir récupéré ces données, nous avons configuré l'interface utilisateur Node-Red. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de 6 blocs : 
 + bloc de connexion
 + bloc debug 
 + bloc jauge de température
