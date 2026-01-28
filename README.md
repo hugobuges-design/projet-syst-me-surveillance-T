@@ -7,6 +7,7 @@
 - [Transmission des données](#Transmission)
   - [Configuration des blocs](#Configuration)
   - [Chemin d'accès](#Chemin)
+- [Fiabilité et résolution de problèmes](#Fiabilité et résolution de problèmes)
 - [Démonstration](#Démonstration)
 - [Annexes](#Annexes)
   - [Annexe 1 - code initial](#Annexe-1) 
@@ -249,14 +250,16 @@ sqlite3 -header -csv data.db " select * from mesures;" > data_mesures1.csv
 ```
 Cela permet de faciliter leur exploitation (voir fichier joint). 
 
-<h1 id="Fiabilité et résolution de problème">${\color{red}Fiabilité et résolution de problème}$</h1>
+<h1 id="Fiabilité et résolution de problèmes">${\color{red}Fiabilité \space et \space résolution \space de \space problèmes}$</h1>
+Pour simuler une coupure réseau et s'assurer de la continuité de la transmission des données, nous avons débrancher la carte et le raspberry puis nous les avons rebranchés et constatés que les données se renvoyaient bien. Le test a été effectué en changeant le WIFI et en le reconnectant, nous avons constater le même résultat.  
 
 <h1 id="Démonstration">${\color{red}Démonstration}$</h1> 
-La vidéo de démonstrtation se trouve dans le fichier : 1000014436.mp4
+La vidéo de démonstration se trouve dans le fichier : 1000014436.mp4
 
 <h1 id="Annexes">${\color{red}Annexe}$</h1>
 <h2 id="Annexe-1">${\color{blue}Annexe 1}$</h2>
-### ${\color{blue}Code \space Arduino \space ESP32} $
+
+Code Arduino ESP32
 
 ```cpp 
 #include <WiFi.h> // Enables the ESP32 to connect to the local network (via WiFi)
@@ -343,7 +346,7 @@ delay(1000*10); // print new values every 10 seconds
 </br> 
 
 <h2 id="Annexe-2">${\color{blue}Annexe 2}$</h2>
-### ${\color{blue}Code \space Arduino \space LED} $ 
+Code Arduino LED} $ 
 
 ```cpp
 void setup() {
@@ -371,7 +374,7 @@ void loop() {
 ```
 
 <h2 id="Annexe-3">${\color{blue}Annexe 3}$</h2>
-### ${\color{blue}Code \space final \space Arduino} $ 
+Code final Arduino
 
 ```cpp 
 #include <WiFi.h> // Enables the ESP32 to connect to the local network (via WiFi)
