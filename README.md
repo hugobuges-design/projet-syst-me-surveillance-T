@@ -11,11 +11,12 @@
   - [Annexe 1](#Annexe-1) 
   - [Annexe 2](#Annexe-2)
   - [Annexe 3](#Annexe-3)
-<br><br>
-</br>
+  - [Annexe 4](#Annexe-4)
+
+<br></br>
 
 ## ${\color{red}Introduction}$ 
-L'objectif du projet est de concevoir un système de surveillance de température en utilisant un capteur LM35, un ESP32, un Raspberry Pi ainsi que le protocole MQTT. Les données seront transmises au Raspberry Pi via Mosquitto, stockées dans une base de données SQLite, et affichées en temps réel grâce à NodeRED. 
+L'objectif du projet est de concevoir un système de surveillance de température en utilisant un capteur LM35, un ESP32, un Raspberry Pi ainsi que le protocole MQTT. Les données seront transmises au Raspberry Pi via CentreIA.fr, stockées dans une base de données SQLite, et affichées en temps réel grâce à NodeRED. 
 
 
 ### ${\color{blue}I- \space Acquisition \space des \space données} $
@@ -226,6 +227,12 @@ Voici le message reçu par mail : <br></br>
   <img src="capture mail.png" width="260">
 </p>
 <br></br>
+
+Pour avoir un historique des données, on les enregistre dans un fichier csv grâce à la commande suivante : 
+``` sql
+sqlite3 -header -csv data.db " select * from mesures;" > data_mesures1.csv
+```
+Cela permet de faciliter leur exploitation (voir fichier joint). 
 
 # ${\color{red}Démonstration}$ 
 La vidéo de démonstrtation se trouve dans le fichier : 1000014436.mp4
