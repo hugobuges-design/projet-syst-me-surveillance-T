@@ -7,11 +7,12 @@
 - [Transmission des données](#Transmission)
   - [Configuration des blocs](#Configuration)
   - [Chemin d'accès](#Chemin)
+- [Démonstration](#Démonstration)
 - [Annexes](#Annexes)
   - [Annexe 1 - code initial](#Annexe-1) 
   - [Annexe 2 - code LED](#Annexe-2)
   - [Annexe 3 - code final](#Annexe-3)
-  - [Annexe 4](#Annexe-4)
+  - [Annexe 4 - température](#Annexe-4)
       - [Annexe 4.1 - température froide](#Annexe-4-1)
       - [Annexe 4.2 - température moyenne](#Annexe-4-2)
       - [Annexe 4.3 - température chaude](#Annexe-4-3)
@@ -133,7 +134,8 @@ Chaque bloc a une configuration spécifique (voir les différentes photos pour p
   <img src="mqtt in.jpg" width="360" height="360">
 </p>
 
-Ensuite aller sur le crayon et compléter l'onglet security <br> 
+Pour sécuriser l'échange de données nous avons ajouter un nom d'utilisateur et un mot de passe à la fois sur le code Arduino et sur le bloc de connexion Node-Red.
+Pour se faire, il faut aller sur le crayon et compléter l'onglet security <br> 
 + nom d'utilisateur : user_iut <br>
 + mot de passe : IUT2026 <br>  
 
@@ -247,7 +249,7 @@ sqlite3 -header -csv data.db " select * from mesures;" > data_mesures1.csv
 ```
 Cela permet de faciliter leur exploitation (voir fichier joint). 
 
-# ${\color{red}Démonstration}$ 
+<h1 id="Démonstration">${\color{red}Démonstration}$</h1> 
 La vidéo de démonstrtation se trouve dans le fichier : 1000014436.mp4
 
 <h1 id="Annexes">${\color{red}Annexe}$</h1>
