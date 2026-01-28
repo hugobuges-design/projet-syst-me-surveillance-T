@@ -21,8 +21,7 @@
 L'objectif du projet est de concevoir un système de surveillance de température en utilisant un capteur LM35, un ESP32, un Raspberry Pi ainsi que le protocole MQTT. Les données seront transmises au Raspberry Pi via CentreIA.fr, stockées dans une base de données SQLite, et affichées en temps réel grâce à NodeRED. 
 
 
-<a id="Acquisition"></a>
-### ${\color{blue}I- \space Acquisition \space des \space données} $
+<h3 id="Acquisition">${\color{blue}I- \space Acquisition \space des \space données}$</h3>
 
 #### <ins>Réalisation du montage</ins>  
 Pour pouvoir obtenir la température, nous avons utilisé un capteur de température LM35 qui est connecté à la carte ESP32. Pour effectuer les branchements entre ces deux appareils, nous avons utilisé la documentation fournie lors des séances précédentes (voir image ci-dessous). 
@@ -45,11 +44,9 @@ Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimenta
 
 $$montage \space LM35-ESP32$$
 
-<a id="Transmission"></a>
-### ${\color{blue}II- \space Transmission \space des \space données} $
+<h3 id="Transmission">${\color{blue}II- \space Transmission \space des \space données}$</h3>
 
-<a id="Chemin"></a>
-#### <ins>**Chemin d'accès**</ins>
+<h4 id="Chemin"><ins><b>Chemin d'accès</b></ins></h4>
 
 Une fois ce montage réalisé, il a été connecté à l'ordinateur dans lequel nous avons rédigé un code Arduino (voir en Annexe1 ou en fichier joint). Ce code permet de récupérer les valeurs de température mesurées avec le LM35 et de se connecter en wifi au poste fixe sur lequel se trouve Node Red. Dans le programme Arduino, nous avons fait en sorte qu'un mot de passe et un nom d'utilisateur soit rentré pour se connecter à CentreIA.
 La liaison se fait comme suit : 
@@ -123,7 +120,7 @@ $$Schéma \space Node-Red$$
 Pour visualiser le rendu des différents paramétrages de température jauge/graphique, voir Annexe 4. 
 <br></br>
  
-#### <ins>**Configuration des blocs**</ins>
+<h4 id="Configuration"><ins><b>Configuration des blocs</b></ins></h4>
 
 Chaque bloc a une configuration spécifique (voir les différentes photos pour paramétrer les blocs) : 
 
@@ -250,7 +247,11 @@ Cela permet de faciliter leur exploitation (voir fichier joint).
 La vidéo de démonstrtation se trouve dans le fichier : 1000014436.mp4
 
 <h1 id="Annexes">${\color{red}Annexe}$</h1>
-# ${\color{red}Annexe}$ 
+<h2 id="Annexe-1">${\color{blue}Annexe 1}$</h2>
+<h2 id="Annexe-2">${\color{blue}Annexe 2}$</h2>
+<h2 id="Annexe-3">${\color{blue}Annexe 3}$</h2>
+<h2 id="Annexe-4">${\color{blue}Annexe 4}$</h2>
+
 ## ${\color{blue}Annexe 1}$ 
 ### ${\color{blue}Code \space Arduino \space ESP32} $
 
