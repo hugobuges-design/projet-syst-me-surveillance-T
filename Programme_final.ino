@@ -51,10 +51,10 @@ Serial.println(WiFi.localIP());
 void loop() {
 connect_MQTT();
 Serial.setTimeout(2000);
-int raw = analogRead(A5);
+int raw = analogRead(33);
 Serial.print("raw : ");
 Serial.println(raw);
-float volts = (float)raw*3.3/4095; // il faut forcer volt a être un float sinon la division renvoie un int (donc 0 au lieu de 0.2)
+float volts = (float)raw*5/4095; // il faut forcer volt a être un float sinon la division renvoie un int (donc 0 au lieu de 0.2)
 Serial.print("volts : ");
 Serial.println(volts);
 float degres = volts/0.01;
@@ -62,7 +62,7 @@ Serial.print("degres : ");
 Serial.println(degres);
 
 #ifdef RGB_BUILTIN
-  if (degres > 30) {
+  if (degres > 25) {
     rgbLedWrite(RGB_BUILTIN, RGB_BRIGHTNESS, 0, 0); // Rouge
     delay(500);
     digitalWrite(RGB_BUILTIN, LOW); // LED éteinte
@@ -71,7 +71,7 @@ Serial.println(degres);
     delay(500);
     digitalWrite(RGB_BUILTIN, LOW); // LED éteinte
   } 
-  else if (degres < 10) {
+  else if (degres < 18) {
     rgbLedWrite(RGB_BUILTIN, 0, 0, RGB_BRIGHTNESS); // Bleu
     delay(500);
     digitalWrite(RGB_BUILTIN, LOW); // LED éteinte
