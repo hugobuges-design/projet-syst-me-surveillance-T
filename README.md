@@ -44,7 +44,7 @@ $$montage \space LM35-ESP32$$
 ### ${\color{blue}II- \space Transmission \space des \space données} $
 #### <ins>**Chemin d'accès**</ins>
 
-Une fois ce montage réalisé, il a été connecté à l'ordinateur dans lequel nous avons rédigé un code Arduino (voir en Annexe1). Ce code permet de récupérer les valeurs de température mesurées avec le LM35 et de se connecter en wifi au poste fixe sur lequel se trouve Node Red. Dans le programme Arduino, nous avons fait en sorte qu'un mot de passe et un nom d'utilisateur soit rentré pour se connecter à CentreIA.
+Une fois ce montage réalisé, il a été connecté à l'ordinateur dans lequel nous avons rédigé un code Arduino (voir en Annexe1 ou en fichier joint). Ce code permet de récupérer les valeurs de température mesurées avec le LM35 et de se connecter en wifi au poste fixe sur lequel se trouve Node Red. Dans le programme Arduino, nous avons fait en sorte qu'un mot de passe et un nom d'utilisateur soit rentré pour se connecter à CentreIA.
 La liaison se fait comme suit : 
 
 ```mermaid
@@ -171,7 +171,7 @@ Cette jauge est paramétrée de manière à ce que trois couleurs soit affichée
 ### ${\color{blue}III- \space Alerte \space et \space automatisation} $
 #### <ins>**Configuration de la LED**</ins>
 Une fois les blocs configurés, nous recevons les valeurs de température dans Node-Red. 
-Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nous indique lorsque la valeur de température mesurée est inférieure ou égale à 17°C et rouge lorsque la température est inférieure ou égale à 27°C.(Voir code Arduino LED en Annexe2). Pour cela il a fallut installer la librairie "Adafruit DMA neopixel". On retrouve en Annexe 3 le code Arduino final avec le clignotement de la LED intégré.  <br> </br>
+Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nous indique lorsque la valeur de température mesurée est inférieure ou égale à 17°C et rouge lorsque la température est inférieure ou égale à 27°C.(Voir code Arduino LED en Annexe2 ou en fichier joint). Pour cela il a fallut installer la librairie "Adafruit DMA neopixel". On retrouve en Annexe 3 (ou en fichier joint) le code Arduino final avec le clignotement de la LED intégré.  <br> </br>
 
 <p align="center">
   <img src="LED Bleue.jpg" width="160" >
@@ -228,7 +228,7 @@ Voici le message reçu par mail : <br></br>
 <br></br>
 
 # ${\color{red}Démonstration}$ 
-https://github.com/C:\Users\hugo buges\projet-syst-me-surveillance-T\1000014436.mp4
+La vidéo de démonstrtation se trouve dans le fichier : 1000014436.mp4
 
 # ${\color{red}Annexe}$ 
 ## ${\color{blue}Annexe 1}$ 
