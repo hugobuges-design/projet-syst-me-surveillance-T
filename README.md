@@ -68,6 +68,7 @@ bash <(curl -sL https://github.com/node-red/linux-installers/releases/latest/dow
 ```sql
 node-red-pi --max-old-space-size=256
 ```
+pendant le chargement, un lien <ins>http://127.0.0.1:1880/</ins> va apparaitre. Il faudra cliquer dessus pour ouvrir Node-Red dans le navigateur du Raspberry.  
 
 + installation de SQLite :
 ```sql
@@ -93,7 +94,7 @@ Exemple de tableau affiché dans la console Raspberry : <br></br>
 <br></br>
 
 Les données recueillies sont en temps réelles et affichées dans l'interface Node Red. 
-Après avoir récupéré ces données, nous avons configuré l'interface utilisateur. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de 9 blocs : 
+Après avoir récupéré ces données, nous avons configuré l'interface utilisateur. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de 6 blocs : 
 + bloc de connexion
 + bloc debug 
 + bloc jauge de température
@@ -108,7 +109,7 @@ Après avoir récupéré ces données, nous avons configuré l'interface utilisa
 $$Schéma \space Node-Red$$
 
 <br> </br> 
-Pour visualiser la jauge et le graphique, on ouvre une nouvel page Node-Red  
+Pour visualiser la jauge et le graphique, on ouvre une nouvelle page Node-Red  
 #### <ins>**Configuration des blocs**</ins>
 
 Chaque bloc a une configuration spécifique (voir les différentes photos pour paramétrer les blocs) : 
@@ -129,6 +130,8 @@ Ensuite aller sur le crayon et compléter l'onglet security <br>
 
 <ins> bloc debug : </ins> configuration basique du bloc <br>
 
+Pour ouvrir la page affichant le graphique et la jauge, on utilise le même lien que celui pour ouvrir Node-Red dans le Raspberry auquel on rajoute ui : <ins>http://127.0.0.1:1880/ui</ins>
+ 
 <ins> bloc jauge de température :</ins> voir la température mesurée en direct<br>
 Cette jauge est paramétrée de manière à ce que trois couleurs soit affichées en fonction de la température mesurée : 
 + bleue pour T : 10 < T < 18 °C
@@ -146,7 +149,10 @@ Cette jauge est paramétrée de manière à ce que trois couleurs soit affichée
 <ins> bloc graphique :</ins> voir l'évolution de la température dans le temps<br>
 
 <p align="center">
-  <img src="graphique.jpg" width="360" height="360">
+  <img src="bloc graphique.jpg" width="360">
+</p>
+<p align="center">
+  <img src="graphique.jpg" width="360">
 </p>
 
 <ins> bloc SQLite :</ins> faire la base de données<br> 
@@ -158,7 +164,7 @@ Cette jauge est paramétrée de manière à ce que trois couleurs soit affichée
 <ins> bloc fonction :</ins> créer le tableau <br> 
 
 <p align="center">
-  <img src="bloc fonction.jpg" width="360" height="360">
+  <img src="bloc fonction.jpg" width="360">
 </p>
 <br></br>
 
@@ -169,11 +175,30 @@ Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nou
 
 <p align="center">
   <img src="LED Bleue.jpg" width="160" >
+</p>
+<p align="center">
+  <img src="LED Rouge.jpg" width="160" >
 </p><br> </br>
 
 
 #### <ins>**Configuration du message d'alerte**</ins>
 Dans l'optique où l'on mesure une température grâce au LM35 sans être à côté du capteur, nous avons fait en sorte de recevoir un mail pour indiquer que la température mesurée est trop basse.
+
+Dans un second temps, nous avons donc rajouté 4 blocs à ceux déjà existant : 
++ <ins> bloc fonction :</ins> définir le message à envoyer <br> 
+<p align="center">
+  <img src="fonction 2.jpg" width="360">
+</p>
+<br></br>
+
++ <ins> 2 blocs switch :</ins> choisir un seuil de détection (ici il y aura un switch pour un seuil de température froid et un pour le seuil chaud) <br> 
+
+<p align="center">
+  <img src="switch f.jpg" width="360">
+</p>
+<p align="center">
+  <img src="switch c.jpg" width="360">
+</p>
 
 <p align="center">
   <img src="Schema Mail.jpg" width="360" height="360">
@@ -183,6 +208,7 @@ Dans l'optique où l'on mesure une température grâce au LM35 sans être à cô
   <img src="bloc fonction mail.jpg" width="360" height="360">
 </p><br> </br>
 
++ <ins> bloc mail :</ins>
 Pour configurer le bloc mail, nous avons d'abord téléchargé une librairie sur Node-Red : node-red-node-email.
 On sélectionne ensuite le bloc mail dans lequel on remplit les champs suivants : 
 <p align="center">
