@@ -7,7 +7,7 @@
 - [Transmission des données](#Transmission)
   - [Configuration des blocs](#Configuration)
   - [Chemin d'accès](#Chemin)
-- [Fiabilité et résolution de problèmes](#Fiabilité et résolution de problèmes)
+- [Fiabilité et résolution de problèmes](#fiabilité)
 - [Démonstration](#Démonstration)
 - [Annexes](#Annexes)
   - [Annexe 1 - code initial](#Annexe-1) 
@@ -29,6 +29,16 @@ L'objectif du projet est de concevoir un système de surveillance de températur
 <h3 id="Acquisition">${\color{blue}I- \space Acquisition \space des \space données}$</h3>
 
 #### <ins>Réalisation du montage</ins>  
+Afin d'avori la liaison Arduino/esp32, il faut : 
++ Aller dans Fichier → Préférences
++ Cliquer sur URL de gestionnaires de cartes supplémentaires et ajouter l’URL :
+https://raw.githubusercontent.com/espressif/arduino-esp32/ghpages/package_esp32_index.json
++ Aller dans le gestionnaire de cartes : Outils → Type de carte → Gestionnaire de carte 
++ Descendre tout en bas jusqu’à trouver esp32, et cliquer sur installer. Une fois que le
+téléchargement et l’installation sont terminés, les outils sont prêts à être utilisés.
++ Pour les cartes ESP32 utilisées au dans le cadre du projet, choisir ESP32 Dev
+Module comme type de carte.
+
 Pour pouvoir obtenir la température, nous avons utilisé un capteur de température LM35 qui est connecté à la carte ESP32. Pour effectuer les branchements entre ces deux appareils, nous avons utilisé la documentation fournie lors des séances précédentes (voir image ci-dessous). 
  
 <p align="center">
@@ -187,7 +197,7 @@ ls puis pwd. <br>
 ### ${\color{blue}III- \space Alerte \space et \space automatisation} $
 #### <ins>**Configuration de la LED**</ins>
 Une fois les blocs configurés, nous recevons les valeurs de température dans Node-Red. 
-Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nous indique lorsque la valeur de température mesurée est inférieure ou égale à 18°C et rouge lorsque la température est inférieure ou égale à 27°C.(Voir code Arduino LED en Annexe2 ou en fichier joint). Pour cela il a fallut installer la librairie "Adafruit DMA neopixel". On retrouve en Annexe 3 (ou en fichier joint) le code Arduino final avec le clignotement de la LED intégré.  <br> </br>
+Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nous indique lorsque la valeur de température mesurée est inférieure ou égale à 18°C et rouge lorsque la température est inférieure ou égale à 27°C.(Voir code Arduino LED en Annexe2 ou en fichier joint). Pour cela il a fallut installer la librairie "Adafruit DMA neopixel" et changer la carte ESP32 pour Adafruit Feather ESP32 V2. On retrouve en Annexe 3 (ou en fichier joint) le code Arduino final avec le clignotement de la LED intégré.  <br> </br>
 
 <p align="center">
   <img src="LED Bleue.jpg" width="160" >
@@ -250,8 +260,14 @@ sqlite3 -header -csv data.db " select * from mesures;" > data_mesures1.csv
 ```
 Cela permet de faciliter leur exploitation (voir fichier joint). 
 
-<h1 id="Fiabilité et résolution de problèmes">${\color{red}Fiabilité \space et \space résolution \space de \space problèmes}$</h1>
+<h1 id="fiabilite">${\color{red}Fiabilité \space et \space résolution \space de \space problèmes}$</h1>
+
 Pour simuler une coupure réseau et s'assurer de la continuité de la transmission des données, nous avons débrancher la carte et le raspberry puis nous les avons rebranchés et constatés que les données se renvoyaient bien. Le test a été effectué en changeant le WIFI et en le reconnectant, nous avons constater le même résultat.  
+
+<ins>Guide de dépannage</ins>
+S'il y a un problème de connexion de Node-RED avec le serveur, il faut se connecter à un réseau 2,4 GHz.
+Si le programme arduino indique une erreur, il faut vérifier que toutes les librairies sont bien installées (PubSubClient, Adafruit DMA neopixel, esp32). 
+S'il y a un problème avec la database, il faut vérifier sur la fonction 1 de Node-Red, on retrouve bien les mêmes termes que ceux utilisés pour créer la table sur Raspberry. 
 
 <h1 id="Démonstration">${\color{red}Démonstration}$</h1> 
 La vidéo de démonstration se trouve dans le fichier : 1000014436.mp4
