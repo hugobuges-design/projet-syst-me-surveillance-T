@@ -130,7 +130,7 @@ Ensuite aller sur le crayon et compléter l'onglet security <br>
 
 <ins> bloc debug : </ins> configuration basique du bloc <br>
 
-Pour ouvrir la page affichant le graphique et la jauge, on utilise le même lien que celui pour ouvrir Node-Red dans le Raspberry auquel on rajoute ui : http://127.0.0.1:1880/ui
+:warning: Pour ouvrir la page affichant le graphique et la jauge, on utilise le même lien que celui pour ouvrir Node-Red dans le Raspberry auquel on rajoute ui : http://127.0.0.1:1880/ui
 Pour visualiser le rendu des différents paramétrages de température jauge/graphique, voir Annexe 4. 
 <ins> bloc jauge de température :</ins> voir la température mesurée en direct<br>
 Cette jauge est paramétrée de manière à ce que trois couleurs soit affichées en fonction de la température mesurée : 
@@ -187,7 +187,7 @@ Dans l'optique où l'on mesure une température grâce au LM35 sans être à cô
 Dans un second temps, nous avons donc rajouté 4 blocs à ceux déjà existant : 
 + <ins> bloc fonction :</ins> définir le message à envoyer <br> 
 <p align="center">
-  <img src="fonction 2.jpg" width="360">
+  <img src="bloc fonction mail.jpg" width="360" height="360">
 </p>
 <br></br>
 
@@ -203,10 +203,7 @@ Dans un second temps, nous avons donc rajouté 4 blocs à ceux déjà existant :
 <p align="center">
   <img src="Schema Mail.jpg" width="360" height="360">
 </p>
-
-<p align="center">
-  <img src="bloc fonction mail.jpg" width="360" height="360">
-</p><br> </br>
+<br> </br>
 
 + <ins> bloc mail :</ins>
 Pour configurer le bloc mail, nous avons d'abord téléchargé une librairie sur Node-Red : node-red-node-email.
