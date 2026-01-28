@@ -112,6 +112,7 @@ Les données obtenues dans Node Red sont affichées dans son interface. Après a
 $$Schéma \space Node-Red$$
 
 <br> </br> 
+
 ::warning: Pour ouvrir la page affichant le graphique et la jauge, on utilise le même lien que celui pour ouvrir Node-Red dans le Raspberry auquel on rajoute ui : http://127.0.0.1:1880/ui
 Pour visualiser le rendu des différents paramétrages de température jauge/graphique, voir Annexe 4. 
 <br></br>
