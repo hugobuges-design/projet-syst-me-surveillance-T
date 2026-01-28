@@ -34,7 +34,7 @@ $$datasheet \space du \space LM35$$
  
 $$datasheet \space de \space l'ESP32$$
 
-Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimentation" du LM35 à la pin "VBUS" ou "USB" de la carte ESP32 qui délivre 5V, un deuxième reliant la pin OUT à la sortie analogique A5 et un troisième reliant les GND des deux appareils.
+Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimentation" du LM35 à la pin "VBUS" ou "USB" de la carte ESP32 qui délivre 5V, un deuxième reliant la pin OUT à la sortie analogique 33 et un troisième reliant les GND des deux appareils.
 
 <p align="center">
   <img src="montage.jpg" width="360" height="360">
@@ -42,6 +42,7 @@ Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimenta
 
 $$montage \space LM35-ESP32$$
 
+<a id="Transmission des données"></a>
 ### ${\color{blue}II- \space Transmission \space des \space données} $
 #### <ins>**Chemin d'accès**</ins>
 
@@ -69,13 +70,13 @@ bash <(curl -sL https://github.com/node-red/linux-installers/releases/latest/dow
 ```sql
 node-red-pi --max-old-space-size=256
 ```
-pendant le chargement, un lien http://127.0.0.1:1880/ va apparaitre. Il faudra cliquer dessus pour ouvrir Node-Red dans le navigateur du Raspberry.  
+Pendant le chargement, un lien http://127.0.0.1:1880/ va apparaitre. Il faudra cliquer dessus pour ouvrir Node-Red dans le navigateur du Raspberry.  
 
 + installation de SQLite :
 ```sql
 sudo apt install sqlite3
 ```
-+ ouvrir la base de donnée (à vérifier) :
++ ouvrir la base de donnée :
 ```sql
 sqlite3 data.db
 ```
@@ -87,20 +88,22 @@ CREATE TABLE mesures (id INTEGER PRIMARY KEY AUTOINCREMENT, ts datetime, temp re
 ```sql
 select * from mesures;
 ```
+Au début le tableau de données est vide. On va donc installer la librairie SQLite sur Node-Red : node-red-node-sqlite
 <br>
-Exemple de tableau affiché dans la console Raspberry : <br></br>
+
+Les données recueillies sont en temps réelles et affichées dans l'interface Node Red. 
+Exemple de tableau affiché à présent dans la console Raspberry : <br></br>
 <p align="center">
   <img src="photo tableau.jpg" width="400" height="400">
 </p>
 <br></br>
 
-Les données recueillies sont en temps réelles et affichées dans l'interface Node Red. 
-Après avoir récupéré ces données, nous avons configuré l'interface utilisateur. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de 6 blocs : 
+Après avoir récupéré ces données, nous avons configuré l'interface utilisateur Node-Red. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de 6 blocs : 
 + bloc de connexion
 + bloc debug 
 + bloc jauge de température
 + bloc graphique
-+ bloc SQLite
++ bloc SQLite (via installation librairie SQLite)
 + bloc fonction
 <br> </br>
 <p align="center">
