@@ -12,6 +12,9 @@
   - [Annexe 2](#Annexe-2)
   - [Annexe 3](#Annexe-3)
   - [Annexe 4](#Annexe-4)
+      - [Annexe 4.1](#Annexe-4-1)
+      - [Annexe 4.2](#Annexe-4-2)
+      - [Annexe 4.3](#Annexe-4-3)
 
 <br></br>
 
@@ -248,11 +251,6 @@ La vidéo de démonstrtation se trouve dans le fichier : 1000014436.mp4
 
 <h1 id="Annexes">${\color{red}Annexe}$</h1>
 <h2 id="Annexe-1">${\color{blue}Annexe 1}$</h2>
-<h2 id="Annexe-2">${\color{blue}Annexe 2}$</h2>
-<h2 id="Annexe-3">${\color{blue}Annexe 3}$</h2>
-<h2 id="Annexe-4">${\color{blue}Annexe 4}$</h2>
-
-## ${\color{blue}Annexe 1}$ 
 ### ${\color{blue}Code \space Arduino \space ESP32} $
 
 ```cpp 
@@ -338,7 +336,8 @@ delay(1000*10); // print new values every 10 seconds
 ```
 <br><br> 
 </br> 
-## ${\color{blue}Annexe 2}$ 
+
+<h2 id="Annexe-2">${\color{blue}Annexe 2}$</h2>
 ### ${\color{blue}Code \space Arduino \space LED} $ 
 
 ```cpp
@@ -366,7 +365,7 @@ void loop() {
 }
 ```
 
-## ${\color{blue}Annexe 3}$ 
+<h2 id="Annexe-3">${\color{blue}Annexe 3}$</h2>
 ### ${\color{blue}Code \space final \space Arduino} $ 
 
 ```cpp 
@@ -423,10 +422,10 @@ Serial.println(WiFi.localIP());
 void loop() {
 connect_MQTT();
 Serial.setTimeout(2000);
-int raw = analogRead(A5);
+int raw = analogRead(33);
 Serial.print("raw : ");
 Serial.println(raw);
-float volts = (float)raw*3.3/4095; // il faut forcer volt a être un float sinon la division renvoie un int (donc 0 au lieu de 0.2)
+float volts = (float)raw*5/4095; // il faut forcer volt a être un float sinon la division renvoie un int (donc 0 au lieu de 0.2)
 Serial.print("volts : ");
 Serial.println(volts);
 float degres = volts/0.01;
@@ -434,7 +433,7 @@ Serial.print("degres : ");
 Serial.println(degres);
 
 #ifdef RGB_BUILTIN
-  if (degres > 30) {
+  if (degres > 25) {
     rgbLedWrite(RGB_BUILTIN, RGB_BRIGHTNESS, 0, 0); // Rouge
     delay(500);
     digitalWrite(RGB_BUILTIN, LOW); // LED éteinte
@@ -443,7 +442,7 @@ Serial.println(degres);
     delay(500);
     digitalWrite(RGB_BUILTIN, LOW); // LED éteinte
   } 
-  else if (degres < 10) {
+  else if (degres < 18) {
     rgbLedWrite(RGB_BUILTIN, 0, 0, RGB_BRIGHTNESS); // Bleu
     delay(500);
     digitalWrite(RGB_BUILTIN, LOW); // LED éteinte
@@ -476,20 +475,20 @@ client.disconnect(); // disconnect from the MQTT broker
 delay(1000*10); // print new values every 10 seconds 
 }
 ```
-## ${\color{blue}Annexe 4}$ 
-### ${\color{blue}Annexe \space 4.1} $ 
+<h2 id="Annexe-4">${\color{blue}Annexe 4}$</h2>
+<h3 id="Annexe-4-1">${\color{blue}Annexe \space 4.1}$</h3>
 <p align="center">
   <img src="Annexe 4.1.jpg" width="360">
 </p>
 <br></br>
 
-### ${\color{blue}Annexe \space 4.2} $ 
+<h3 id="Annexe-4-2">${\color{blue}Annexe \space 4.2}$</h3>
 <p align="center">
   <img src="Annexe 4.2.jpg" width="360">
 </p>
 <br></br>
 
-### ${\color{blue}Annexe \space 4.3} $ 
+<h3 id="Annexe-4-3">${\color{blue}Annexe \space 4.3}$</h3>
 <p align="center">
   <img src="Annexe 4.3.jpg" width="360">
 </p>
