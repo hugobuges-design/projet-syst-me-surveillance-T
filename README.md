@@ -362,7 +362,7 @@ delay(1000*10); // print new values every 10 seconds
 </br> 
 
 <h2 id="Annexe-2">${\color{blue}Annexe 2}$</h2>
-Code Arduino LED} $ 
+Code Arduino LED
 
 ```cpp
 void setup() {
