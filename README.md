@@ -455,3 +455,19 @@ client.disconnect(); // disconnect from the MQTT broker
 delay(1000*10); // print new values every 10 seconds 
 }
 ```
+## ${\color{blue}Annexe 4}$ 
+### ${\color{blue}Annexe \space 4.1} $ 
+<p align="center">
+  <img src="Annexe 4.1.jpg" width="360">
+</p>
+<br></br>
+### ${\color{blue}Annexe \space 4.2} $ 
+<p align="center">
+  <img src="Annexe 4.2.jpg" width="360">
+</p>
+<br></br>
+### ${\color{blue}Annexe \space 4.3} $ 
+<p align="center">
+  <img src="Annexe 4.3.jpg" width="360">
+</p>
+<br></br>
