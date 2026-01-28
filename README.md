@@ -42,7 +42,6 @@ Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimenta
 
 $$montage \space LM35-ESP32$$
 
-<a id="Transmission des données"></a>
 ### ${\color{blue}II- \space Transmission \space des \space données} $
 #### <ins>**Chemin d'accès**</ins>
 
@@ -98,9 +97,9 @@ Lorsque l'on réouvre la table sur le raspberry, on obtient à présent le table
 </p>
 <br></br>
 
-Les données obtenues dans Node Red sont affichées dans son interface. Après avoir récupéré ces données, nous avons configuré l'interface utilisateur Node-Red. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de 6 blocs : 
+Les données obtenues dans Node Red sont affichées dans son interface. Après avoir récupéré ces données, nous avons configuré l'interface utilisateur Node-Red. Cet interface doit afficher les valeurs de température dans un graphique. L'interface est construit à partir de 7 blocs : 
 + bloc de connexion
-+ bloc debug 
++ 2 blocs debug 
 + bloc jauge de température
 + bloc graphique
 + bloc SQLite (via installation librairie SQLite)
@@ -113,7 +112,10 @@ Les données obtenues dans Node Red sont affichées dans son interface. Après a
 $$Schéma \space Node-Red$$
 
 <br> </br> 
-Pour visualiser la jauge et le graphique, on ouvre une nouvelle page Node-Red  
+::warning: Pour ouvrir la page affichant le graphique et la jauge, on utilise le même lien que celui pour ouvrir Node-Red dans le Raspberry auquel on rajoute ui : http://127.0.0.1:1880/ui
+Pour visualiser le rendu des différents paramétrages de température jauge/graphique, voir Annexe 4. 
+<br></br>
+ 
 #### <ins>**Configuration des blocs**</ins>
 
 Chaque bloc a une configuration spécifique (voir les différentes photos pour paramétrer les blocs) : 
@@ -134,8 +136,6 @@ Ensuite aller sur le crayon et compléter l'onglet security <br>
 
 <ins> bloc debug : </ins> configuration basique du bloc <br>
 
-:warning: Pour ouvrir la page affichant le graphique et la jauge, on utilise le même lien que celui pour ouvrir Node-Red dans le Raspberry auquel on rajoute ui : http://127.0.0.1:1880/ui
-Pour visualiser le rendu des différents paramétrages de température jauge/graphique, voir Annexe 4. 
 <ins> bloc jauge de température :</ins> voir la température mesurée en direct<br>
 Cette jauge est paramétrée de manière à ce que trois couleurs soit affichées en fonction de la température mesurée : 
 + bleue pour T : 10 < T < 18 °C
