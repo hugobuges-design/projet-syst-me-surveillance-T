@@ -131,7 +131,7 @@ Ensuite aller sur le crayon et compléter l'onglet security <br>
 <ins> bloc debug : </ins> configuration basique du bloc <br>
 
 Pour ouvrir la page affichant le graphique et la jauge, on utilise le même lien que celui pour ouvrir Node-Red dans le Raspberry auquel on rajoute ui : http://127.0.0.1:1880/ui
- 
+Pour visualiser le rendu des différents paramétrages de température jauge/graphique, voir Annexe 4. 
 <ins> bloc jauge de température :</ins> voir la température mesurée en direct<br>
 Cette jauge est paramétrée de manière à ce que trois couleurs soit affichées en fonction de la température mesurée : 
 + bleue pour T : 10 < T < 18 °C
@@ -461,11 +461,13 @@ delay(1000*10); // print new values every 10 seconds
   <img src="Annexe 4.1.jpg" width="360">
 </p>
 <br></br>
+
 ### ${\color{blue}Annexe \space 4.2} $ 
 <p align="center">
   <img src="Annexe 4.2.jpg" width="360">
 </p>
 <br></br>
+
 ### ${\color{blue}Annexe \space 4.3} $ 
 <p align="center">
   <img src="Annexe 4.3.jpg" width="360">
