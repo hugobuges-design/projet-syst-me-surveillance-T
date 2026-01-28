@@ -3,10 +3,10 @@
 # 📑 ${\color{red}Sommaire}$
 
 - [Introduction](#Introduction)
-- [Acquisition des données](#Acquisition-des-données)
-- [Transmission des données](#Transmission-des-données)
-  - [Configuration des blocs](#Configuration-des-blocs)
-  - [Chemin d'accès](#Chemin-daccès)
+- [Acquisition des données](#Acquisition)
+- [Transmission des données](#Transmission)
+  - [Configuration des blocs](#Configuration)
+  - [Chemin d'accès](#Chemin)
 - [Annexes](#Annexes)
   - [Annexe 1](#Annexe-1) 
   - [Annexe 2](#Annexe-2)
@@ -15,10 +15,13 @@
 
 <br></br>
 
+<a id="Introduction"></a>
 ## ${\color{red}Introduction}$ 
+
 L'objectif du projet est de concevoir un système de surveillance de température en utilisant un capteur LM35, un ESP32, un Raspberry Pi ainsi que le protocole MQTT. Les données seront transmises au Raspberry Pi via CentreIA.fr, stockées dans une base de données SQLite, et affichées en temps réel grâce à NodeRED. 
 
 
+<a id="Acquisition"></a>
 ### ${\color{blue}I- \space Acquisition \space des \space données} $
 
 #### <ins>Réalisation du montage</ins>  
@@ -42,7 +45,10 @@ Le LM35 est donc relié à l'ESP32 grâce à 3 fils. Un reliant la pin "Alimenta
 
 $$montage \space LM35-ESP32$$
 
+<a id="Transmission"></a>
 ### ${\color{blue}II- \space Transmission \space des \space données} $
+
+<a id="Chemin"></a>
 #### <ins>**Chemin d'accès**</ins>
 
 Une fois ce montage réalisé, il a été connecté à l'ordinateur dans lequel nous avons rédigé un code Arduino (voir en Annexe1 ou en fichier joint). Ce code permet de récupérer les valeurs de température mesurées avec le LM35 et de se connecter en wifi au poste fixe sur lequel se trouve Node Red. Dans le programme Arduino, nous avons fait en sorte qu'un mot de passe et un nom d'utilisateur soit rentré pour se connecter à CentreIA.
@@ -111,7 +117,7 @@ Les données obtenues dans Node Red sont affichées dans son interface. Après a
 
 $$Schéma \space Node-Red$$
 
-<br> </br> 
+<br></br> 
 
 :warning: Pour ouvrir la page affichant le graphique et la jauge, on utilise le même lien que celui pour ouvrir Node-Red dans le Raspberry auquel on rajoute ui : http://127.0.0.1:1880/ui
 Pour visualiser le rendu des différents paramétrages de température jauge/graphique, voir Annexe 4. 
@@ -160,7 +166,9 @@ Cette jauge est paramétrée de manière à ce que trois couleurs soit affichée
   <img src="graphique.jpg" width="360">
 </p>
 
-<ins> bloc SQLite :</ins> faire la base de données<br> 
+<ins> bloc SQLite :</ins> faire la base de données
+Pour obtenir l'emplacement de la database, il faut écrire dans la console Raspberry : 
+ls puis pwd. <br> 
 
 <p align="center">
   <img src="bloc sql.jpg" width="360" height="360">
