@@ -8,13 +8,13 @@
   - [Configuration des blocs](#Configuration)
   - [Chemin d'accès](#Chemin)
 - [Annexes](#Annexes)
-  - [Annexe 1](#Annexe-1) 
-  - [Annexe 2](#Annexe-2)
-  - [Annexe 3](#Annexe-3)
+  - [Annexe 1 - code initial](#Annexe-1) 
+  - [Annexe 2 - code LED](#Annexe-2)
+  - [Annexe 3 - code final](#Annexe-3)
   - [Annexe 4](#Annexe-4)
-      - [Annexe 4.1](#Annexe-4-1)
-      - [Annexe 4.2](#Annexe-4-2)
-      - [Annexe 4.3](#Annexe-4-3)
+      - [Annexe 4.1 - température froide](#Annexe-4-1)
+      - [Annexe 4.2 - température moyenne](#Annexe-4-2)
+      - [Annexe 4.3 - température chaude](#Annexe-4-3)
 
 <br></br>
 
@@ -193,6 +193,7 @@ Ensuite, nous ajoutons une LED clignotante bleue (présente sur l'ESP32) qui nou
   <img src="LED Rouge.jpg" width="160" >
 </p><br> </br>
 
+Afin de minimiser la consommation électrique de la carte nous avons décidé de ne pas allumer de LED sur la carte tant qu'il n'y a pas de problèmes de température. Lorsque cela arrive, la LED clignote 2 fois puis s'éteint. 
 
 #### <ins>**Configuration du message d'alerte**</ins>
 Dans l'optique où l'on mesure une température grâce au LM35 sans être à côté du capteur, nous avons fait en sorte de recevoir un mail pour indiquer que la température mesurée est trop basse ou trop haute.
