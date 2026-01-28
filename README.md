@@ -68,7 +68,7 @@ bash <(curl -sL https://github.com/node-red/linux-installers/releases/latest/dow
 ```sql
 node-red-pi --max-old-space-size=256
 ```
-pendant le chargement, un lien <ins>http://127.0.0.1:1880/</ins> va apparaitre. Il faudra cliquer dessus pour ouvrir Node-Red dans le navigateur du Raspberry.  
+pendant le chargement, un lien http://127.0.0.1:1880/ va apparaitre. Il faudra cliquer dessus pour ouvrir Node-Red dans le navigateur du Raspberry.  
 
 + installation de SQLite :
 ```sql
@@ -130,7 +130,7 @@ Ensuite aller sur le crayon et compléter l'onglet security <br>
 
 <ins> bloc debug : </ins> configuration basique du bloc <br>
 
-Pour ouvrir la page affichant le graphique et la jauge, on utilise le même lien que celui pour ouvrir Node-Red dans le Raspberry auquel on rajoute ui : <ins>http://127.0.0.1:1880/ui</ins>
+Pour ouvrir la page affichant le graphique et la jauge, on utilise le même lien que celui pour ouvrir Node-Red dans le Raspberry auquel on rajoute ui : http://127.0.0.1:1880/ui
  
 <ins> bloc jauge de température :</ins> voir la température mesurée en direct<br>
 Cette jauge est paramétrée de manière à ce que trois couleurs soit affichées en fonction de la température mesurée : 
